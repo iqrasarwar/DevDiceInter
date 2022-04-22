@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Difference</title>
+</head>
+<body>
+<script>
+   let arr = [[1,2,3],
+   [2,3,4],
+   [9,4,5]]
+   console.log(arr)
+   mainDiagonalSum = 0;
+   secondaryDiagonalSum = 0;
+   for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[0].length; j++) {
+         if(i==j)
+            mainDiagonalSum+=arr[i][j];
+         if(i+j == arr.length - 1)
+            secondaryDiagonalSum+=arr[i][j];
+      }
+   }
+   console.log(mainDiagonalSum)
+   console.log(secondaryDiagonalSum)
+   let diff = mainDiagonalSum-secondaryDiagonalSum
+   console.log(diff < 0 ? diff *-1: diff)
+</script>
+</body>
+</html>
