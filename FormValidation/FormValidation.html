@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <form action="" >
+   <form action="/FormValidation.html" method="get" onsubmit="event.preventDefault(); onSubmitListner();">
       <div class="form_div" id="form">
          <h1>Form Validation With JS</h1>
          <div>
@@ -18,7 +18,7 @@
          </div>
          <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="email">
+            <input type="text" name="email" id="email" class="email">
             <span id="email_err"></span>
          </div>
          <div>
@@ -33,14 +33,16 @@
          </div>
          <div>
             <label for="confirmPassword">Confirm Password</label>
-            <input type="confirmPassword" name="confirmPassword" id="confirmPassword" class="confirmPassword">
+            <input type="password" name="confirmPassword" id="confirmPassword" class="confirmPassword">
             <span id="conpassword_err"></span>
          </div>
          <div>
-            <input type="submit" name="submit" id="submit" class="submit" onclick="onSubmitListner()">
+            <input type="submit" name="submit" id="submit" class="submit">
          </div>
       </div>
+      <span id="sucess"></span>
    </form>
+
    <script src="script.js"></script>
 </body>
 </html>

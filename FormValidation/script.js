@@ -1,59 +1,79 @@
-function checkRequired(inputs,errors)
+function checkRequired(inputs,errors,submit)
 {
-   inputs.forEach((element,index) => {
+   for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index];
       if(element.value.length <= 0)
+      {
          document.getElementById(errors[index]).innerHTML += "Required\n";
-
-         });
+         submit = false;
+      }
+   }
+   return submit
 }
 
-function checkLenght(inputs,errors)
+function checkLenght(inputs,errors,submit)
 {
-   inputs.forEach((element,index) => {
+   for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index];
       if(element.value.length >= 31)
-         document.getElementById(errors[index]).innerHTML += "Max length can not exceed 30\n";
-         });
-   inputs.forEach((element,index) => {
-      if(element.value.length >= 31)
+      {
+            document.getElementById(errors[index]).innerHTML += "Max length can not exceed 30\n";
+            submit = false;
+      }
+   }
+   for (let index = 0; index < inputs.length; index++) {
+      const element = inputs[index];
+      if(element.value.length < 5)
+      {
          document.getElementById(errors[index]).innerHTML += "Min length must be 5 characters long.\n";
-         });
+         submit = false;
+      }
+   }
+   return submit
 }
 
-function checkPassword(password,confirmPassword)
+function checkPassword(password,confirmPassword,submit)
 {
-   if(password != confirmPassword &&
+   if(password.value != confirmPassword.value &&
       password.value.length>=5 && confirmPassword.value.length>=5)
    {
       document.getElementById("password_err").innerHTML+="Confirm Password must match password.";
+      submit = false;
    }
+   return submit
 }
 
 
-function checkEmail(email)
+function checkEmail(email,submit)
 {
-   const pattren = "/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"
-
-   if(!pattren.test(email))
+   const pattren = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+console.log(pattren.test(email.value))
+console.log(email.value)
+   if (!pattren.test(email.value))
    {
       document.getElementById("email_err").innerHTML+="Invalid email address.";
+      submit = false;
    }
+   return submit
 }
 
 
-function onSubmitListner()
+function onSubmitListner(e)
 {
-   const form = document.getElementById("form");
    const namee = document.getElementById("name");
    const email = document.getElementById("email");
    const phone = document.getElementById("phone");
    const password = document.getElementById("password");
    const confirmPassword = document.getElementById("confirmPassword");
-   const input_arr = [namee,email,password,confirmPassword];
-   console.log(input_arr)
-   const errors = ["name_err","email_err","password_err","confirmPassword_err"];
-   checkPassword(password,confirmPassword);
-   checkEmail(email);
-   checkRequired(input_arr,errors);
-   checkLenght(input_arr,errors);
-
+   const input_arr = [namee,email,phone,password,confirmPassword];
+   const errors = ["name_err","email_err","number_err","password_err","conpassword_err"];
+   for (let index = 0; index < errors.length; index++) {
+      const element = errors[index];
+      document.getElementById(element).innerHTML = "";
+   }
+   if(!checkRequired(input_arr,errors,true)) return false;
+   if(!checkPassword(password,confirmPassword,true)) return false;
+   if(!checkLenght(input_arr,errors,true)) return false;
+   if(!checkEmail(email,true)) return false;
+   document.getElementById('sucess').innerHTML="SUCCESS";
 }
