@@ -8,19 +8,6 @@
 </head>
 <body>
 <script>
-   var myObject = {
-    foo: "bar",
-    func: function() {
-        var self = this;
-        console.log("outer func:  this.foo = " + this.foo);
-        console.log("outer func:  self.foo = " + self.foo);
-        (function() {
-            console.log("inner func:  this.foo = " + this.foo);
-            console.log("inner func:  self.foo = " + self.foo);
-        }());
-    }
-};
-myObject.func();
    let arr = [[1,2,3],
    [2,3,4],
    [9,4,5]]
@@ -35,10 +22,11 @@ myObject.func();
             secondaryDiagonalSum+=arr[i][j];
       }
    }
-   console.log(mainDiagonalSum)
-   console.log(secondaryDiagonalSum)
-   let diff = mainDiagonalSum-secondaryDiagonalSum
-   console.log(diff < 0 ? diff *-1: diff)
+   console.log("mainDiagonalSum is " + mainDiagonalSum)
+   console.log("secondaryDiagonalSum is " + secondaryDiagonalSum)
+   let diff = mainDiagonalSum-secondaryDiagonalSum;
+   let x = diff < 0 ? diff *-1: diff;
+   console.log("difference is " + x);
 </script>
 </body>
 </html>
