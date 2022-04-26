@@ -1,0 +1,25 @@
+.from_div
+{
+   width: 20vw;
+   color: purple;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.from_div input{
+   width: 19.5vw;
+}
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+button{
+   margin: 2%;
+   width: max-content;
+   height: 25px;
+   color: purple;
+   border: 1px solid purple;
+}

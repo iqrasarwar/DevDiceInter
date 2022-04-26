@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FormValidation</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <form action="" >
+      <div class="form_div" id="form">
+         <h1>Form Validation With JS</h1>
+         <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="name">
+            <span id="name_err"></span>
+         </div>
+         <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="email">
+            <span id="email_err"></span>
+         </div>
+         <div>
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" id="phone" class="phone">
+            <span id="number_err"></span>
+         </div>
+         <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="password">
+            <span id = "password_err"></span>
+         </div>
+         <div>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="confirmPassword" name="confirmPassword" id="confirmPassword" class="confirmPassword">
+            <span id="conpassword_err"></span>
+         </div>
+         <div>
+            <input type="submit" name="submit" id="submit" class="submit" onclick="onSubmitListner()">
+         </div>
+      </div>
+   </form>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.form_div
+{
+   width: 80vw;
+   height: 80vh;
+   background-color: silver;
+   color: purple;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.form_div div
+{
+   width: 30vw;
+   height: 10vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+body{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
