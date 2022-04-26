@@ -7,6 +7,19 @@
    <title>Document</title>
 </head>
 <body>
-   
+   <script>
+      function convert(time)
+      {
+         let timee = time.split(':');
+         let form = time.indexOf('AM') != -1 ? "AM" :"PM";
+         if (timee[0] === '12')
+            timee[0] = '00';
+         if (form === 'PM')
+            timee[0] = parseInt(timee[0], 10) + 12;
+         return `${timee[0]}:${timee[1]}`;
+      }
+      console.log(convert("12:00:00AM"))
+      console.log(convert("12:00:00PM"))
+   </script>
 </body>
 </html>
