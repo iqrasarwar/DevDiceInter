@@ -1,0 +1,53 @@
+.row
+{
+   border: 2px inset rgb(102, 255, 63);
+   display: flex;
+   flex-direction: row;
+   width: max-content;
+}
+.cell
+{
+   border:2px outset rgb(255, 46, 46);
+   border-block: none;
+   width:100px;
+   height: 100px;
+}
+.content{
+   padding: 2% 40%;
+}
+body{
+   background-color: rgb(206, 230, 195);
+   height: 96vh;
+   width: 96vw;
+   margin: 0px;
+   padding: 0%;
+   color: green;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+   color: red;
+}
+#result
+{
+   text-align: center;
+   color: green;
+   font-weight: bolder;
+}
+.cell{
+   font-size: 50px;
+   color: red;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.end{
+   color: rgb(46, 117, 12);
+   background-color: rgb(245, 151, 151);
+   font-size:15px;
+   font-weight: bold;
+   border: 0px;
+   padding: 1% 2%;
+   border-radius: 5px;
+}
