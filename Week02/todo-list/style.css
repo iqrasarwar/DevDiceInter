@@ -1,0 +1,46 @@
+*,body{
+   margin: 0px;
+   box-sizing: border-box;
+}
+.content
+{
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(106, 77, 235);
+   color: white;
+   display: flex;
+   flex-direction: column;
+   padding-top: 3%;
+}
+input{
+   padding: 5%;
+   margin: 3%;
+   margin-block-end: 3%;
+   border: 1px solid gainsboro;
+   border-radius: 3px;
+}
+button{
+   color: rgb(67, 49, 148);
+   background-color: white;
+   border: none;
+   padding: 5% 7%;
+   font-variant: small-caps;
+   font-size: 15px;
+   font-weight: bold;
+   max-width: 95%;
+   border-radius: 3px;
+   margin: 3%;
+}
+
+.input{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+table
+{
+   background-color: white;
+   color: black;
+}
+
