@@ -2,45 +2,56 @@
    margin: 0px;
    box-sizing: border-box;
 }
-.content
-{
-   justify-content: center;
-   align-items: center;
-   background-color: rgb(106, 77, 235);
-   color: white;
+.centerr{
    display: flex;
    flex-direction: column;
-   padding-top: 3%;
+   justify-content: center;
+   align-items: center;
 }
-input{
-   padding: 5%;
-   margin: 3%;
-   margin-block-end: 3%;
-   border: 1px solid gainsboro;
+h1{
+   color: rgb(0, 255, 13);
+   margin-block:1%;
+   text-align: center;
+}
+.content
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   background-color: rgb(0, 255, 13);
+   margin: 2% 5%;
+}
+.content h1{
+   color: white;
+}
+input
+{
+   padding: 1%;
+   border: 1px solid greenyellow;
    border-radius: 3px;
 }
 button{
-   color: rgb(67, 49, 148);
-   background-color: white;
-   border: none;
-   padding: 5% 7%;
-   font-variant: small-caps;
-   font-size: 15px;
-   font-weight: bold;
-   max-width: 95%;
-   border-radius: 3px;
-   margin: 3%;
+   color: white;
+   background-color: rgb(0, 255, 13);
+   border:none;
+   padding: 1%;
+   margin-top: 20px;
+   border-radius: 5px;
 }
-
-.input{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.tsks0{
+   background-color: rgb(241, 147, 147);
 }
-table
+.tsks1{
+   background-color: rgb(247, 247, 148);
+}
+.tsks2{
+   background-color: rgb(164, 247, 164);
+}
+.tsk-col
 {
-   background-color: white;
-   color: black;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 5px;
+   min-width: 300px;
 }
-
