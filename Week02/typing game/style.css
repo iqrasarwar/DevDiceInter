@@ -1,0 +1,19 @@
+h1{
+   color: purple;
+}
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+textarea:focus,textarea:active,textarea
+{
+   border: 2px inset purple;
+   outline: none;
+}
+p
+{
+   color: purple;
+   font: 17px;
+}
