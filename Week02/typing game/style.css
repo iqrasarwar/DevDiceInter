@@ -17,3 +17,15 @@ p
    color: purple;
    font: 17px;
 }
+.match{
+   color: green;
+}
+.unmatch{
+   color: red;
+}
+#invis{
+   display: none;
+   color: red;
+   font-size: 20px;
+   font-weight: bolder;
+}
