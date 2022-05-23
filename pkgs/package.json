@@ -5,6 +5,14 @@
     "@babel/preset-env": "^7.18.0",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "prettier": "2.6.2"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "swagger-ui-express": "^4.4.0"
   }
 }
