@@ -7,21 +7,50 @@
    <title>User Crud</title>
 </head>
 <body>
-   <body>
-      <div>
-         <h1>Create New User</h1>
-         <form action="http://localhost:3000/book" method="POST">
-             <div>
-                 <label for="Name">Name</label>
-                 <input  name="Name">
-             </div>
-             <div>
-               <label for="writer">Password</label>
-               <input  name="Writer">
+   <div>
+      <h1>Create New User</h1>
+      <form action="http://localhost:3000/user" method="POST">
+            <div>
+               <label for="name">Name</label>
+               <input name="name">
             </div>
-             <button type="submit">Submit</button>
+            <div>
+            <label for="password">Password</label>
+            <input  name="password">
+         </div>
+         <div>
+            <label for="role">Role</label>
+            <input  name="role">
+         </div>
+            <button type="submit">Submit</button>
+      </form>
+      <h1>List of Users</h1>
+      <div id="listt">USERS <br></div>
+      <h1>Delete Users</h1>
+      <div>
+         <label for="name">Name</label>
+         <input name="name" id = "NameToDel" value="">
+      </div>
+      <button onclick="deleteUser()">Submit</button>
+      <div id="editdiv">
+         <h1>Edit User</h1>
+         <form action="" id="editform">
+            <div>
+               <label for="name" >Name</label>
+               <input name="name" id="editn">
+            </div>
+            <div>
+               <label for="password">Password</label>
+               <input  name="password" id="editp">
+            </div>
+            <div>
+               <label for="role">Role</label>
+               <input  name="role" id="editr">
+            </div>
+            <button type="submit" onclick="editUser()">Edit</button>
          </form>
-     </div>
-   </body>
+      </div>
+   </div>
+   <script src="controller.js"></script>
 </body>
 </html>
