@@ -78,6 +78,15 @@ app.post('/user/:name', (req, res) => {
    }
    res.send('user is edited');
 });
-
+app.get('/user/:name', (req, res) => {
+   const id = req.params.name;
+   for (let user of users) {
+      if (user.name === id) {
+          res.json(user);
+          return;
+      }
+  }
+  res.status(404).send('user not found');
+});
 //use lod sh
 //mke hsh
